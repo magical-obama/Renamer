@@ -362,5 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-installer-files/Renamer.*
-installer-files/Renamer Installer.exe
+/installer-files
+!/installer-files/README.txt
