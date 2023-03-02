@@ -1,0 +1,1 @@
+On a file or a folder, right-click and select "Rename all Office docs in the folder" or "Rename this Office doc"

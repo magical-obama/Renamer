@@ -4,6 +4,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
 
 [Setup]
+SignTool=signtool
 AppName=Renamer
 AppVersion=1.0
 WizardStyle=modern
