@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Renamer": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Maximilian\\Documents\\Das bin ich.docx"
+    }
+  }
+}
