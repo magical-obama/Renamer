@@ -18,7 +18,9 @@ SourceDir=installer-files
 OutputBaseFilename="Renamer Installer"
 
 [Files]
-Source: "Renamer.*"; DestDir: "{app}"; Flags: onlyifdoesntexist
+Source: "Renamer.exe"; DestDir: "{app}"; Flags: sign
+Source: "Renamer.dll"; DestDir: "{app}"; Flags: onlyifdoesntexist sign
+Source: "Renamer.runtimeconfig.json"; DestDir: "{app}"
 Source: "README.txt"; DestDir: "{app}"; Flags: isreadme
 
 ; [Icons]
