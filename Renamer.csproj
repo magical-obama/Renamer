@@ -2,16 +2,18 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Renamer</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
     <SignAssembly>True</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>icon.jpg</PackageIcon>
+    <PackageIcon>iconx128.png</PackageIcon>
     <StartupObject>Program</StartupObject>
     <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Platforms>AnyCPU;ARM32;ARM64;x64;x86</Platforms>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
@@ -39,6 +41,14 @@
 
   <ItemGroup>
     <None Update="icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="iconx128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
