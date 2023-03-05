@@ -87,7 +87,13 @@ internal class Program
                 Console.Error.WriteLine("Couldn't find author name from doc, default name used...");
             }
 
-            Console.WriteLine(author);
+            // Console.WriteLine(author);
+
+            if (String.IsNullOrEmpty(author))
+            {
+                Console.Error.WriteLine("Couldn't find author name from doc, default name used...");
+                author = DEFAULT_AUTHOR;
+            }
 
             // string[] nameParts = info.Name.Split(".");
             string baseFileName = Path.GetFileNameWithoutExtension(fileName);

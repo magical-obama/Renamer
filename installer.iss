@@ -6,6 +6,9 @@
 [Setup]
 SignTool=signtool
 AppName=Renamer
+AppPublisher=Maximilian Schwärzler
+ArchitecturesAllowed=x64
+SetupIconFile=icon.ico
 AppVersion=1.0
 WizardStyle=modern
 DefaultDirName={autopf}\Renamer
@@ -22,6 +25,7 @@ Source: "Renamer.exe"; DestDir: "{app}"; Flags: sign
 Source: "Renamer.dll"; DestDir: "{app}"; Flags: onlyifdoesntexist sign
 Source: "Renamer.runtimeconfig.json"; DestDir: "{app}"
 Source: "README.txt"; DestDir: "{app}"; Flags: isreadme
+Source: "dotnet-runtime-6.0.14-win-x64.exe"; DestDir: "{tmp}"
 
 ; [Icons]
 ; Name: "{group}\Renamer"; Filename: "{app}\Renamer.exe"
@@ -38,3 +42,6 @@ Root: HKCR; Subkey: "*\shell\Renamer"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "*\shell\Renamer"; ValueType: string; ValueData: "Rename this Office doc"
 Root: HKCR; Subkey: "*\shell\Renamer"; ValueType: string; ValueName: "icon"; ValueData: """{app}\Renamer.exe"""
 Root: HKCR; Subkey: "*\shell\Renamer\command"; ValueType: string; ValueData: """{app}\Renamer.exe"" ""%1"""
+
+[Run]
+Filename: "{tmp}\dotnet-runtime-6.0.14-win-x64.exe"; Parameters: "/quiet"
