@@ -9,7 +9,7 @@ AppName=Renamer
 AppPublisher=Maximilian Schwärzler
 ArchitecturesAllowed=x64
 SetupIconFile=icon.ico
-AppVersion=1.0
+AppVersion=1.2
 WizardStyle=modern
 DefaultDirName={autopf}\Renamer
 DefaultGroupName=Renamer
@@ -18,7 +18,7 @@ Compression=lzma2
 SolidCompression=yes
 OutputDir=.
 SourceDir=installer-files
-OutputBaseFilename="Renamer Installer"
+OutputBaseFilename="Renamer Installer v{#SetupSetting("AppVersion")}"
 
 [Files]
 Source: "Renamer.exe"; DestDir: "{app}"; Flags: sign
